@@ -136,9 +136,9 @@ class Game:
         self.turn_score = None
 
 
-class TimedGameProxy:
-    def __init__(self, timestamp):
-        self.timestamp = timestamp
+class Proxy(Game):
+    def __init__(self):
+        self.timestamp = time.time() + 60
 
     def timeCheck(self, timestamp):
         if (self.timestamp < time.time() ):
